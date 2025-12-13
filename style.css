@@ -1,0 +1,833 @@
+/* style.css */
+/* Estilos gerais e reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores da bandeira brasileira e tema cultural */
+    --verde-brasil: #009B3A;
+    --amarelo-brasil: #FEDF00;
+    --azul-brasil: #002776;
+    --branco: #FFFFFF;
+    --preto: #2E2E2E;
+    --cinza-claro: #ebebeb;
+    --cinza-medio: #cdcdcd;
+    --laranja-acessivel: #FF6B35;
+    --rosa-brasil: #E6398A;
+    --amarelo-acessivel: #FFD700;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--preto);
+    background-color: #fee00014;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TIPOGRAFIA ACESSÍVEL */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--azul-brasil);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--verde-brasil);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--azul-brasil);
+    margin-bottom: 0.8rem;
+}
+
+/* SKIP LINK PARA ACESSIBILIDADE */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--laranja-acessivel);
+    color: var(--branco);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 0;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--amarelo-brasil);
+    outline-offset: 2px;
+}
+
+/* ESTILOS DO HEADER - COM NAVEGAÇÃO À DIREITA */
+.header-index {
+    background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil));
+    padding: 1rem 2rem;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.div-h {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* NAVEGAÇÃO À DIREITA NO HEADER */
+.nav-direita {
+    margin-left: auto;
+}
+
+.nav-direita ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-direita a {
+    color: var(--azul-brasil);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-direita a:hover,
+.nav-direita a:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 2px solid var(--branco);
+    outline-offset: 2px;
+}
+
+.nav-direita a[aria-current="page"] {
+    color: var(--azul-brasil);
+}
+
+/* BANNER ACESSÍVEL */
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--azul-brasil);
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient( rgba(10, 17, 79, 0.555), rgba(10, 17, 79, 0.555)), 
+                        url('img/banner.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.banner-content {
+    text-align: center;
+    color: var(--branco);
+    z-index: 2;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.banner h2 {
+    font-size: 2.8rem;
+    color: var(--branco);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Botão explorar no banner */
+.btn-explorar {
+    display: inline-block;
+    background-color: var(--amarelo-brasil);
+    color: var(--azul-brasil);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-explorar:hover,
+.btn-explorar:focus {
+    background-color: var(--laranja-acessivel);
+    color: var(--branco);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* ESTILOS DO CONTEÚDO PRINCIPAL */
+.main-index {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-index > h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--azul-brasil);
+    position: relative;
+}
+
+.main-index > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--verde-brasil);
+}
+
+/* LISTA DE ARTISTAS */
+.listaArtistas {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 1.5rem;
+}
+
+.periodo-titulo {
+    color: var(--verde-brasil);
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--cinza-medio);
+}
+
+.listaArtistas ul {
+    list-style-type: none;
+}
+
+.listaArtistas li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: var(--cinza-claro);
+    border-left: 5px solid transparent;
+}
+
+.listaArtistas li:hover {
+    background-color: rgba(0, 155, 58, 0.08);
+    transform: translateX(5px);
+}
+
+.listaArtistas li:focus-within {
+    background-color: rgba(0, 155, 58, 0.12);
+    outline: 2px solid var(--amarelo-acessivel);
+    outline-offset: 2px;
+}
+
+.geralRank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--azul-brasil);
+    color: var(--branco);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+/* IMAGENS DOS ARTISTAS */
+.imgArtistaRita,
+.imgArtistaLegiao,
+.imgArtistaLulu,
+.imgArtistaMarisa,
+.imgArtistaRN,
+.imgArtistaSkank,
+.imgArtistaJR,
+.imgArtistaJQ,
+.imgArtistaLos,
+.imgArtistaMamonas {
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--cinza-medio);
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    border: 2px solid var(--branco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imgArtistaRita {
+    background-image: url(imgA/rita-lee.png);
+}
+.imgArtistaLegiao {
+    background-image: url(imgA/legiao.jpg);
+}
+.imgArtistaLulu {
+    background-image: url(imgA/lulu.jpg);
+}
+.imgArtistaMarisa {
+    background-image: url(imgA/marisa.webp);
+}
+.imgArtistaRN {
+    background-image: url(imgA/Raca_negra.avif);
+}
+.imgArtistaSkank {
+    background-image: url(imgA/skank.jpg);
+}
+.imgArtistaJR {
+    background-image: url(imgA/charlie-brown.jpg);
+}
+.imgArtistaJQ {
+    background-image: url(imgA/jota.webp);
+}
+.imgArtistaLos {
+    background-image: url(imgA/los\ hermanos.avif);
+}
+.imgArtistaMamonas {
+    background-image: url(imgA/mamonas.webp);
+}
+
+.wrapMusic {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapMusic a {
+    text-decoration: none;
+    color: var(--azul-brasil);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    flex: 1;
+}
+
+.wrapMusic a:hover,
+.wrapMusic a:focus {
+    color: var(--verde-brasil);
+    border-bottom-color: var(--amarelo-brasil);
+    outline: none;
+}
+
+/* Botão de favorito */
+.btn-favorito {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--cinza-medio);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-favorito:hover,
+.btn-favorito:focus {
+    background-color: rgba(254, 223, 0, 0.1);
+    color: var(--amarelo-acessivel);
+    outline: 2px solid var(--laranja-acessivel);
+}
+
+.btn-favorito[aria-pressed="true"] {
+    color: var(--amarelo-brasil);
+}
+
+.favorito-icon {
+    display: block;
+}
+
+/* CONTROLES DE ACESSIBILIDADE */
+.controles-acessibilidade {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: rgba(0, 155, 58, 0.05);
+    border-radius: 10px;
+    border: 1px solid var(--cinza-medio);
+}
+
+.btn-contraste,
+.btn-fonte {
+    background-color: var(--azul-brasil);
+    color: var(--branco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.btn-contraste:hover,
+.btn-fonte:hover,
+.btn-contraste:focus,
+.btn-fonte:focus {
+    background-color: var(--verde-brasil);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 2px solid var(--laranja-acessivel);
+    outline-offset: 2px;
+}
+
+.btn-contraste[aria-pressed="true"] {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+/* FOOTER COM CONTATO */
+footer {
+    background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil));
+    color: var(--azul-brasil);
+    padding: 2.5rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Informações de contato no footer */
+.footer-contato {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-titulo {
+    color: var(--azul-brasil);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contato-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.contato-icone {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.contato-texto {
+    font-size: 1rem;
+    color: var(--azul-brasil);
+}
+
+.contato-link {
+    color: var(--azul-brasil);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contato-link:hover,
+.contato-link:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* Navegação do rodapé */
+.footer-nav {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 39, 118, 0.2);
+    padding-top: 1.5rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: var(--azul-brasil);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--preto);
+    border-bottom-color: var(--azul-brasil);
+    outline: none;
+}
+
+/* ACESSIBILIDADE - FOCUS VISIBLE */
+:focus-visible {
+    outline: 3px solid var(--laranja-acessivel);
+    outline-offset: 2px;
+}
+
+/* Classe para esconder elementos visualmente mas mantê-los acessíveis */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ANIMAÇÕES SUAVES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-index h1, .main-index h2, .listaArtistas {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.listaArtistas li:nth-child(1) { animation-delay: 0.1s; }
+.listaArtistas li:nth-child(2) { animation-delay: 0.2s; }
+.listaArtistas li:nth-child(3) { animation-delay: 0.3s; }
+.listaArtistas li:nth-child(4) { animation-delay: 0.4s; }
+.listaArtistas li:nth-child(5) { animation-delay: 0.5s; }
+.listaArtistas li:nth-child(6) { animation-delay: 0.6s; }
+.listaArtistas li:nth-child(7) { animation-delay: 0.7s; }
+.listaArtistas li:nth-child(8) { animation-delay: 0.8s; }
+.listaArtistas li:nth-child(9) { animation-delay: 0.9s; }
+.listaArtistas li:nth-child(10) { animation-delay: 1s; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .header-index {
+        padding: 1rem;
+    }
+    
+    .div-h {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .nav-direita {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .nav-direita ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .nav-direita a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .banner {
+        height: 250px;
+    }
+    
+    .banner h2 {
+        font-size: 2rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .main-index {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .listaArtistas {
+        padding: 1.5rem;
+    }
+    
+    .listaArtistas li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem;
+    }
+    
+    .geralRank {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .imgArtistaRita,
+    .imgArtistaLegiao,
+    .imgArtistaLulu,
+    .imgArtistaMarisa,
+    .imgArtistaRN,
+    .imgArtistaSkank,
+    .imgArtistaJR,
+    .imgArtistaJQ,
+    .imgArtistaLos,
+    .imgArtistaMamonas {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .wrapMusic {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .wrapMusic a {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .btn-favorito {
+        align-self: flex-end;
+        margin-top: -40px;
+    }
+    
+    .controles-acessibilidade {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .btn-contraste,
+    .btn-fonte {
+        width: 100%;
+        max-width: 300px;
+        margin: 0.3rem 0;
+    }
+    
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+    
+    .contato-lista li {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .footer-contato {
+        padding: 0.8rem;
+    }
+    
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+    
+    .banner h2 {
+        font-size: 1.6rem;
+    }
+    
+    .banner p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-explorar {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .main-index {
+        padding: 1rem;
+    }
+    
+    .listaArtistas {
+        padding: 1rem;
+    }
+    
+    .periodo-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .contato-lista li {
+        font-size: 0.9rem;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* MODO ALTO CONTRASTE (ativo via JavaScript) */
+body.alto-contraste {
+    background-color: #000 !important;
+    color: #FFF !important;
+}
+
+body.alto-contraste .header-index {
+    background: linear-gradient(to right, #000, #FFF) !important;
+}
+
+body.alto-contraste .listaArtistas {
+    background-color: #000 !important;
+    color: #FFF !important;
+    border: 2px solid #FFF !important;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4,
+body.alto-contraste a {
+    color: #FFF !important;
+}
+
+body.alto-contraste footer {
+    background: linear-gradient(to right, #000, #FFF) !important;
+    color: #FFF !important;
+}
+
+/* TAMANHO DE FONTE AUMENTADO (ativo via JavaScript) */
+body.fonte-grande {
+    font-size: 120% !important;
+}
+
+body.fonte-grande h1 {
+    font-size: 3rem !important;
+}
+
+body.fonte-grande h2 {
+    font-size: 2.4rem !important;
+}
+
+body.fonte-grande h3 {
+    font-size: 1.8rem !important;
+}
+
+body.fonte-grande h4 {
+    font-size: 1.4rem !important;
+}
+
+body.fonte-grande .wrapMusic a {
+    font-size: 1.7rem !important;
+}

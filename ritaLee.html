@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página sobre Rita Lee, a Rainha do Rock Brasileiro - Uma Brasilidade musical dos anos 80">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ritaLee.css">
+    <script src="script.js" defer></script>
+    <title>Artistas Anos 80 - Rita Lee | Brasilidades Musicais</title>
+    <style>
+        :root {
+            /* Nova paleta de cores */
+            --creme-claro: #F7F4EF;
+            --marrom-claro: #C7A27C;
+            --azul-petroleo: #2C5871;
+            --azul-acinzentado: #A7BCC7;
+            --branco: #FFFFFF;
+            --preto: #2E2E2E;
+            --cinza-medio: #CCCCCC;
+            --destaque-laranja: #FF6B35;
+        }
+        
+        /* Estilos para aria-live regions */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip link para navegação por teclado -->
+    <a href="#main-content" class="skip-link" aria-label="Pular para o conteúdo principal">
+        Pular para o conteúdo principal
+    </a>
+    
+    <!-- Region landmark para atualizações dinâmicas -->
+    <div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    
+    <header role="banner">
+        <button 
+            onclick="window.location.href='index.html'" 
+            aria-label="Voltar para a página inicial"
+            accesskey="v"
+            title="Pressione Alt + V para voltar">
+            voltar
+        </button>
+        
+        <div class="div-h">
+            <img 
+                class="logo" 
+                src="img/logo.png" 
+                alt="Logo escrita 'Brasilidades' com flores rosas e amarelas. Site sobre cultura brasileira"
+                aria-describedby="logo-description">
+            <span id="logo-description" class="sr-only">
+                Logotipo do site Brasilidades, representando a diversidade cultural brasileira
+            </span>
+            <nav aria-label="Navegação principal" class="sr-only">
+                <a href="sobre-nos" aria-label="Sobre nós"></a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main" tabindex="-1">
+        <section aria-labelledby="banner-heading">
+            <h2 id="banner-heading" class="sr-only">Banner da Rita Lee</h2>
+            <div class="banner">
+                <img 
+                    src="imgA/rita lee.png" 
+                    alt="Rita Lee em um fundo colorido, usando óculos escuros e uma expressão marcante. A imagem representa a Rainha do Rock Brasileiro"
+                    role="img"
+                    aria-describedby="banner-description">
+                <span id="banner-description" class="sr-only">
+                    Imagem artística de Rita Lee, símbolo do rock brasileiro, com cores vibrantes representando sua personalidade marcante
+                </span>
+            </div>
+        </section>
+
+        <div class="artista-container">
+            <article class="artistaText" aria-labelledby="rita-lee-title">
+                <h1 id="rita-lee-title">Rita Lee</h1>
+                
+                <div role="article" aria-label="Biografia de Rita Lee">
+                    <span>
+                        Rita Lee, um dos maiores nomes do Rock brasileiro. Rita iniciou sua carreira com a banda Os
+                        Mutantes em 1966 no estado de São Paulo, a banda misturava elementos de rock psicodélico, pop e de MPB.
+                        <br><br>
+                        A banda era composta por: Rita Lee (vocal e percussão), Arnaldo Baptista (baixo e teclado),
+                        e Sérgio Dias (guitarra e vocal), começaram como backing band para Os Tropicalistas, mas logo se
+                        tornaram independentes. Lançaram álbuns clássicos como "Os Mutantes" de 1968, e "Mutantes" de 1969,
+                        com músicas como "Panis et Circenses" e "A Minha Menina". A banda também ganhou bastante reconhecimento
+                        na indústria musical internacional, o que influenciou no rock brasileiro.
+                        <br><br>
+                        Mas, após 6 anos de atividade, a banda começou a se separar no ano de 1972, devido à
+                        conflitos internos entre os integrantes com diferenças criativas, problemas pessoais, e acontecimentos
+                        históricos que estavam acontecendo na época, como a ditadura militar (1964 - 1985). Sendo Rita a primeira a
+                        deixar o grupo, e mesmo com desafios, Rita continuou falando sobre a banda com carinho. No ano
+                        seguinte, Rita se juntou a Lúcia Turnbull para a produção de um disco onde o nomearam de Cilibrinas do Éden, o
+                        disco foi gravado com doze faixas, mas não foi publicado, e hoje só é possível ouvi-lo graças à
+                        pirataria. E em Julho desse mesmo ano, Rita se juntou à banda Tutti-Frutti sendo sua banda de apoio até
+                        1978, resultando em sucessos como "Agora Só Falta Você" e "Ovelha Negra".
+                        <br><br>
+                        Rita voltou como artista solo em 1979 com o álbum "Rita Lee". Seu retorno foi
+                        definitivamente um grande marco de sua carreira musical, transformando-a em uma lenda viva, com álbuns como "Rita Lee"
+                        (1979), "Saúde" (1981), e "Rita e Roberto" (1982) vendendo milhões e ganhando prêmios.
+                    </span>
+                </div>
+            </article>
+            
+            <section class="albunsArtista" aria-labelledby="albuns-destacados">
+                <h2 id="albuns-destacados">Álbuns Destacados</h2>
+                <hr aria-hidden="true">
+                <br>
+                
+                <div role="region" aria-label="Primeira linha de álbuns">
+                    <div id="fila2" role="list" aria-label="Discografia de Rita Lee">
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/Os_Mutantes.jpg" 
+                                alt="Capa do álbum Os Mutantes de 1968. Arte psicodélica com cores vibrantes"
+                                loading="lazy">
+                            <a 
+                                href="https://open.spotify.com/album/0RBkIFbQy91qv8Tqja20og?si=qAKK_QxJRiuB2FXNsVoeeg" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum Os Mutantes de 1968. Abrir no Spotify">
+                                Os Mutantes (1968)
+                                <span class="sr-only"> - Abrir no Spotify em nova janela</span>
+                            </a>
+                        </div>
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/mutantes.jpg" 
+                                alt="Capa do álbum Mutantes de 1969. Arte com elementos surrealistas"
+                                loading="lazy">
+                            <a 
+                                href="https://open.spotify.com/album/63cmfLGQUMuPRwgllZmz6a?si=Y-_5TAW5SQ61jMpPqczvSg" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum Mutantes de 1969. Abrir no Spotify">
+                                Mutantes (1969)
+                                <span class="sr-only"> - Abrir no Spotify em nova janela</span>
+                            </a>
+                        </div>
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/cilibrinas.jpg" 
+                                alt="Capa do álbum As Cilibrinas do Éden. Arte com temas místicos e natureza"
+                                loading="lazy">
+                            <a 
+                                href="https://youtube.com/playlist?list=PLLCx7chs1o5Xuoyj227roJgNTcUVsSsfu&si=5X_uXLrRtK_cWUza" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum As Cilibrinas do Éden. Abrir playlist no YouTube">
+                                As Cilibrinas do Éden
+                                <span class="sr-only"> - Abrir playlist no YouTube em nova janela</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div role="region" aria-label="Segunda linha de álbuns">
+                    <div id="fila2" role="list" aria-label="Álbuns solo de Rita Lee">
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/rita lee.jpg" 
+                                alt="Capa do álbum Rita Lee de 1979. Foto da artista com estilo marcante"
+                                loading="lazy">
+                            <a 
+                                href="https://open.spotify.com/album/50grT4Iw3RbK8ZGnGWwk4Z?si=8NhieAC2ShWOTyvTFCQa4A" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum Rita Lee de 1979. Abrir no Spotify">
+                                Rita Lee (1979)
+                                <span class="sr-only"> - Abrir no Spotify em nova janela</span>
+                            </a>
+                        </div>
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/saude.jpg" 
+                                alt="Capa do álbum Saúde de 1981. Arte colorida com referências à saúde"
+                                loading="lazy">
+                            <a 
+                                href="https://open.spotify.com/album/5zvIJc4CPmQhafWnvmd9UR?si=1M7QqbztSyqqh2umMnMbmg" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum Saúde de 1981. Abrir no Spotify">
+                                Saúde (1981)
+                                <span class="sr-only"> - Abrir no Spotify em nova janela</span>
+                            </a>
+                        </div>
+                        <div class="albumNome" role="listitem">
+                            <img 
+                                src="album/rita e roberto.jpg" 
+                                alt="Capa do álbum Rita e Roberto de 1982. Foto do casal artístico"
+                                loading="lazy">
+                            <a 
+                                href="https://open.spotify.com/album/7Kg78UnUGm88yN0T5S9N8s?si=L1DrP1nhR9ezngmM5LfR2Q" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Álbum Rita e Roberto de Carvalho de 1982. Abrir no Spotify">
+                                Rita e Roberto de Carvalho (1982)
+                                <span class="sr-only"> - Abrir no Spotify em nova janela</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sr-only" role="status" aria-live="polite" aria-atomic="true">
+                    Carregados 6 álbuns da carreira de Rita Lee. Navegue usando a tecla Tab para acessar os links.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy;2025 - Página desenvolvida para fins educacionais sobre acessibilidade web</p>
+        <div class="sr-only">
+            <p>Página sobre Rita Lee, desenvolvida com foco em acessibilidade web.</p>
+            <p>Use a tecla Tab para navegar entre os elementos interativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para melhorar a acessibilidade
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar foco ao conteúdo principal quando a página carrega
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.setAttribute('tabindex', '-1');
+            }
+            
+            // Adicionar teclas de atalho
+            document.addEventListener('keydown', function(e) {
+                // Atalho para voltar (Alt + V)
+                if (e.altKey && e.key === 'v') {
+                    const backButton = document.querySelector('header button');
+                    if (backButton) {
+                        backButton.click();
+                        e.preventDefault();
+                    }
+                }
+                
+                // Atalho para pular para conteúdo principal (Alt + M)
+                if (e.altKey && e.key === 'm') {
+                    const skipLink = document.querySelector('.skip-link');
+                    if (skipLink) {
+                        skipLink.focus();
+                        e.preventDefault();
+                    }
+                }
+            });
+            
+            // Melhorar a navegação por teclado nos álbuns
+            const albumLinks = document.querySelectorAll('.albumNome a');
+            albumLinks.forEach(link => {
+                link.addEventListener('focus', function() {
+                    const album = this.closest('.albumNome');
+                    if (album) {
+                        album.style.zIndex = '10';
+                    }
+                });
+                
+                link.addEventListener('blur', function() {
+                    const album = this.closest('.albumNome');
+                    if (album) {
+                        album.style.zIndex = '';
+                    }
+                });
+            });
+            
+            // Anunciar quando álbuns são focados
+            albumLinks.forEach(link => {
+                link.addEventListener('focus', function() {
+                    const albumName = this.textContent.trim();
+                    const liveRegion = document.getElementById('live-region');
+                    if (liveRegion) {
+                        liveRegion.textContent = `Focado no álbum: ${albumName}. Pressione Enter para abrir.`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

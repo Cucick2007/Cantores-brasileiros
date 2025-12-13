@@ -1,0 +1,387 @@
+/* ritaLee.css - CSS específico para página da Rita Lee */
+
+/* Estilos gerais para a página do artista */
+:root {
+    /* Cores da bandeira brasileira e tema cultural */
+    --verde-brasil: #009B3A;
+    --amarelo-brasil: #FEDF00;
+    --azul-brasil: #002776;
+    --branco: #FFFFFF;
+    --preto: #2E2E2E;
+    --cinza-claro: #ebebeb;
+    --cinza-medio: #cdcdcd;
+    --laranja-acessivel: #FF6B35;
+    --rosa-brasil: #E6398A;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--preto);
+    background-color: #fee00014;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER COM LAYOUT INVERTIDO - BOTÃO DIREITA, LOGO ESQUERDA */
+header {
+    background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil));
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Mantém a ordem normal, mas invertemos os elementos */
+}
+
+/* Logo agora à esquerda */
+header .div-h {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    order: 1; /* Logo vem primeiro (esquerda) */
+}
+
+header .logo {
+    height: 80px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Botão voltar agora à direita */
+header button {
+    background-color: var(--azul-brasil);
+    color: var(--branco);
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    order: 2; /* Botão vem depois (direita) */
+    margin-left: auto; /* Empurra para a direita */
+}
+
+header button:hover,
+header button:focus {
+    background-color: #1455d7;
+    color: var(--branco);
+    outline: none;
+}
+/* MAIN CONTENT */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* BANNER DA PÁGINA DO ARTISTA */
+.banner {
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.banner img:hover {
+    transform: scale(1.02);
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 39, 118, 0.578), transparent);
+}
+
+/* CONTEÚDO DE TEXTO DO ARTISTA */
+.artistaText {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--cinza-medio);
+}
+
+.artistaText h1 {
+    color: var(--verde-brasil);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.artistaText h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(to right, var(--amarelo-brasil), var(--verde-brasil));
+    border-radius: 2px;
+}
+
+.artistaText span {
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--azul-brasil);
+}
+
+.artistaText span br {
+    margin-bottom: 1rem;
+}
+
+/* ÁREA DE ÁLBUNS */
+.albunsArtista {
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--cinza-medio);
+}
+
+.albunsArtista h2 {
+    color: var(--verde-brasil);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+
+
+#fila2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ESTILOS DOS ÁLBUNS */
+.albumNome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--cinza-medio);
+}
+.albumNome:hover {
+    transform: translateY(-8px);
+    background-color: #fee0004f;
+    border-color: var(--verde-brasil);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.albumNome img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 3px solid var(--cinza-medio);
+    transition: all 0.3s ease;
+}
+
+.albumNome:hover img {
+    border-color: var(--verde-brasil);
+    transform: scale(1.03);
+}
+
+.albumNome a {
+    text-decoration: none;
+    color: var(--azul-brasil);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.albumNome a:hover,
+.albumNome a:focus {
+    color: var(--verde-brasil);
+    outline: none;
+}
+
+.albumNome a::after {
+    content: "";
+    margin-left: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.albumNome a:hover::after {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil));
+    color: var(--azul-brasil);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ACESSIBILIDADE */
+:focus-visible {
+    outline: 3px solid var(--laranja-acessivel);
+    outline-offset: 2px;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.banner {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.artistaText {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.albumNome {
+    animation: pulse 2s infinite;
+}
+
+.albumNome:nth-child(1) { animation-delay: 0.5s; }
+.albumNome:nth-child(2) { animation-delay: 0.6s; }
+.albumNome:nth-child(3) { animation-delay: 0.7s; }
+.albumNome:nth-child(4) { animation-delay: 0.8s; }
+.albumNome:nth-child(5) { animation-delay: 0.9s; }
+.albumNome:nth-child(6) { animation-delay: 1s; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    #fila2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Em mobile, muda para coluna */
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    header .div-h {
+        order: 2; /* Logo fica embaixo em mobile */
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    header button {
+        order: 1; /* Botão fica em cima em mobile */
+        align-self: flex-start;
+        margin-left: 0;
+    }
+    
+    header .logo {
+        height: 60px;
+    }
+    
+    main {
+        padding: 0 1.5rem;
+    }
+    
+    .banner img {
+        height: 300px;
+    }
+    
+    .artistaText,
+    .albunsArtista {
+        padding: 1.5rem;
+    }
+    
+    .artistaText h1 {
+        font-size: 2.2rem;
+    }
+    
+    .artistaText span {
+        font-size: 1rem;
+    }
+    
+    #fila2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .albumNome img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+        height: 220px;
+    }
+    
+    .artistaText h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .artistaText,
+    .albunsArtista {
+        padding: 1rem;
+    }
+    
+    footer {
+        padding: 1.5rem;
+    }
+}

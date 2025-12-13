@@ -1,8 +1,6 @@
-/* skank.css - CSS específico para página do Skank */
+/* CSS específico para página do Skank */
 
-/* Estilos gerais para a página do artista */
 :root {
-    /* Cores da bandeira brasileira e tema cultural */
     --verde-brasil: #009B3A;
     --amarelo-brasil: #FEDF00;
     --azul-brasil: #002776;
@@ -30,7 +28,6 @@ body {
     flex-direction: column;
 }
 
-/* HEADER COM LAYOUT INVERTIDO - BOTÃO DIREITA, LOGO ESQUERDA */
 header {
     background: linear-gradient(to right, var(--verde-brasil), var(--amarelo-brasil));
     padding: 1rem 2rem;
@@ -42,7 +39,6 @@ header {
     flex-direction: row;
 }
 
-/* Logo agora à esquerda */
 header .div-h {
     display: flex;
     align-items: center;
@@ -57,7 +53,6 @@ header .logo {
     max-width: 100%;
 }
 
-/* Botão voltar agora à direita */
 header button {
     background-color: var(--azul-brasil);
     color: var(--branco);
@@ -83,7 +78,7 @@ header button:focus {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 main {
     flex: 1;
     max-width: 1200px;
@@ -92,7 +87,7 @@ main {
     padding: 0 2rem;
 }
 
-/* BANNER DA PÁGINA DO ARTISTA */
+/* BANNER */
 .banner {
     width: 100%;
     margin: 2rem 0;
@@ -120,7 +115,7 @@ main {
     height: 100px;
     background: linear-gradient(to top, rgba(0, 39, 118, 0.578), transparent);
 }
-/* CONTEÚDO DE TEXTO DO ARTISTA */
+
 .artistaText {
     background-color: var(--branco);
     border-radius: 12px;
@@ -147,14 +142,14 @@ main {
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
-    text-align: left; /* Alterado: título alinhado à esquerda */
+    text-align: left;
 }
 
 .artistaText h1::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0; /* Alterado: linha começa da esquerda */
+    left: 0;
     width: 150px;
     height: 4px;
     background: linear-gradient(to right, var(--amarelo-brasil), var(--verde-brasil));
@@ -173,7 +168,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* ÁREA DE ÁLBUNS */
 .albunsArtista {
     background-color: var(--branco);
     border-radius: 12px;
@@ -199,7 +193,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* ESTILOS DOS ÁLBUNS */
+
 .albumNome {
     display: flex;
     flex-direction: column;
@@ -300,7 +294,7 @@ footer p {
 .albumNome:nth-child(5) { animation-delay: 0.9s; }
 .albumNome:nth-child(6) { animation-delay: 1s; }
 
-/* RESPONSIVIDADE */
+
 @media (max-width: 992px) {
     #fila2 {
         grid-template-columns: repeat(2, 1fr);
@@ -399,7 +393,7 @@ footer p {
     }
 }
 
-/* Estilo para imagens ausentes */
+
 .banner img[src=""], 
 .banner img:not([src]) {
     background: linear-gradient(135deg, #009B3A, #002776, #FEDF00);
@@ -421,4 +415,5 @@ footer p {
     font-size: 16px;
     text-align: center;
     padding: 20px;
+
 }

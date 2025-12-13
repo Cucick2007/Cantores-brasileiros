@@ -316,34 +316,34 @@ h4 {
 }
 
 .imgArtistaRita {
-    background-image: url(imgA/rita-lee.png);
+    background-image: url(rita-lee.png);
 }
 .imgArtistaLegiao {
-    background-image: url(imgA/legiao.jpg);
+    background-image: url(legiao.jpg);
 }
 .imgArtistaLulu {
-    background-image: url(imgA/lulu.jpg);
+    background-image: url(lulu.jpg);
 }
 .imgArtistaMarisa {
-    background-image: url(imgA/marisa.webp);
+    background-image: url(marisa.webp);
 }
 .imgArtistaRN {
-    background-image: url(imgA/Raca_negra.avif);
+    background-image: url(Raca_negra.avif);
 }
 .imgArtistaSkank {
-    background-image: url(imgA/skank.jpg);
+    background-image: url(skank.jpg);
 }
 .imgArtistaJR {
-    background-image: url(imgA/charlie-brown.jpg);
+    background-image: url(charlie-brown.jpg);
 }
 .imgArtistaJQ {
-    background-image: url(imgA/jota.webp);
+    background-image: url(jota.webp);
 }
 .imgArtistaLos {
-    background-image: url(imgA/los\ hermanos.avif);
+    background-image: url(los\ hermanos.avif);
 }
 .imgArtistaMamonas {
-    background-image: url(imgA/mamonas.webp);
+    background-image: url(mamonas.webp);
 }
 
 .wrapMusic {
@@ -830,4 +830,5 @@ body.fonte-grande h4 {
 
 body.fonte-grande .wrapMusic a {
     font-size: 1.7rem !important;
+
 }
